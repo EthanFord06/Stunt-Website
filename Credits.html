@@ -1,0 +1,1280 @@
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpeg" href="assets/StuntLogo.jpg">
+    <meta charset="UTF-8">
+    <title>Pete Ford Stunts - Credits</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background-color: #000;
+            color: #ea4e1b;
+            padding: 20px;
+            background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+        }
+
+        .banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1 { margin: 0; }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover { color: #ea4e1b; }
+
+        nav a.active {
+            color: #ea4e1b;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #000;
+            color: #ea4e1b;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .credits-section {
+            max-width: 900px;
+            margin: 50px auto 100px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+
+        .credits-section h2 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            font-size: 2.4rem;
+            color: #ea4e1b;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .credits-section .subtitle {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 35px;
+            border-left: 4px solid #ea4e1b;
+            padding-left: 12px;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #fff;
+            border: 1px solid #ddd;
+            color: #555;
+            padding: 7px 18px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ea4e1b;
+            color: #fff;
+            border-color: #ea4e1b;
+        }
+
+        .table-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-top: 4px solid #ea4e1b;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        .cred-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        .cred-table thead {
+            background: #1a1a1a;
+        }
+
+        .cred-table th {
+            text-align: left;
+            font-size: 12px;
+            font-weight: bold;
+            color: #ea4e1b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 14px 18px;
+        }
+
+        .cred-table td {
+            padding: 13px 18px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            vertical-align: middle;
+        }
+
+        .cred-table tbody tr:last-child td { border-bottom: none; }
+
+        .cred-table tbody tr:hover { background: #fff5f2; }
+
+        .cred-table .yr {
+            color: #888;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .cred-table .film-name {
+            font-weight: bold;
+            color: #222;
+        }
+
+        .cred-table .role {
+            color: #ea4e1b;
+            font-size: 14px;
+        }
+
+        .cred-table .director {
+            color: #555;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .cred-table th,
+            .cred-table td {
+                padding: 10px;
+                font-size: 13px;
+            }
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/Credits.gif" alt="StuntLogo" class="banner">
+</header>
+
+<nav>
+    <a href="Homepage.html">Home</a>
+    <a href="Biography.html">Biography</a>
+    <a href="Images.html">Images</a>
+    <a href="Credits.html" class="active">Credits</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Awards.html">Awards</a>
+</nav>
+
+
+
+<div class="credits-section">
+
+    <h2>Film &amp; TV Credits</h2>
+    <p class="subtitle">A selection of stunt work across film and television productions</p>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCredits('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCredits('Film', this)">Film</button>
+        <button class="filter-btn" onclick="filterCredits('TV', this)">TV</button>
+    </div>
+
+    <div class="table-container">
+        <table class="cred-table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Title</th>
+                    <th>Role</th>
+                    <th>Director</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody id="creditsBody">
+               
+                <tr data-type="TV">
+                    <td class="yr">2026</td>
+                    <td class="film-name">Young Sherlock</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Anders Engström</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2026</td>
+                    <td class="film-name">Under Salt Marsh</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Claire Oakley</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2024-2026</td>
+                    <td class="film-name">Call the Midwife</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">David O'Neill</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">The War Between the Lnd and the Sea</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Dylan Holmes Williams</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Riot Women</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Amanda Brotchie</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024-2026</td>
+                    <td class="film-name">Blue Lights</td>
+                    <td class="role">Stunt Coordinator + Second Unit Director</td>
+                    <td class="director">Jack Casey</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">The Girlfriend</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Andrea Harkin</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2025</td>
+                    <td class="film-name">The Fantastic Four: First Steps</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Matt Shakman</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Too Much</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Lena Dunham</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2020-2025</td>
+                    <td class="film-name">Grantchester</td>
+                    <td class="role">Stunt Coordinator + Stunt Performer</td>
+                    <td class="director">Rob Evans</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Art Detectives</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jennie Paddon</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Dept. Q</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Scott Frank</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Mobland</td>
+                    <td class="role">Assistant Stunt Coordinator + Stunt Driver</td>
+                    <td class="director">Anthony Byrne</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Gangs of London</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Hongsun Kim</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Snow white</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Marc Webb</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Towards Zero</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Sam Yates</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Cleaner</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Martin Campbell</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Mickey 17</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Bong Joon Ho</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2025</td>
+                    <td class="film-name">Back in Action</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">Seth Gordon</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2025</td>
+                    <td class="film-name">The Rig</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Macpherson</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Kraven the Hunter</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">J.C. Chandor</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2021-2024</td>
+                    <td class="film-name">Shetland</td>
+                    <td class="role">Stunt Coordinator + Stunt Performer</td>
+                    <td class="director">Ruth Paxton</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">The Marlow Murder Club</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Steve Barron</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Recursive Dreams</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Max Vanderspuy</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Blitz</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Steve McQueen</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2022-2024</td>
+                    <td class="film-name">House of the Dragon</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Clare Kilner</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Red Eye</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Kieron Hawkes</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Damaged</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">Director Name</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2024</td>
+                    <td class="film-name">Ghostbusters: Frozen Empire</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Gil Kenan</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">McDonald & Dodds</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Stephen Gallacher</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">The Gentlemen</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Guy Ritchie</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">True Love</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Carl Tibbetts</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2008-2024</td>
+                    <td class="film-name">Silent Witness</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Tracey Rooney</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2024</td>
+                    <td class="film-name">True detetive</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Issa López</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2023</td>
+                    <td class="film-name">Slow Horses</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Adam Randall</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2023</td>
+                    <td class="film-name">Wonka</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Paul King</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2023</td>
+                    <td class="film-name">Payback</td>
+                    <td class="role">Stunt Coordinator + Stunt Performer</td>
+                    <td class="director">Jennie Darnell</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2022-2023</td>
+                    <td class="film-name">Screw</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Issa López</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2023</td>
+                    <td class="film-name">Annika</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Issa López</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2023</td>
+                    <td class="film-name">World on Fire</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Drew Casson</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2023</td>
+                    <td class="film-name">The Flash</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Andy Muschietti</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2023</td>
+                    <td class="film-name">Ted Lasso</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Declan Lowney</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2022</td>
+                    <td class="film-name">Your Christmas or Mine?</td>
+                    <td class="role">Stunt Coordinator</td>
+                    <td class="director">Jim O'Hanion</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2022</td>
+                    <td class="film-name">The Peripheral</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Alrick Riley</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2016-2022</td>
+                    <td class="film-name">Outlander</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Metin Hüseyin</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2022</td>
+                    <td class="film-name">Fantastic Beasts: The Secrets of Dumbledore</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2022</td>
+                    <td class="film-name">The Ipcress File</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">James Watkins</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2022</td>
+                    <td class="film-name">The Batman</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Matt Reeves</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2022</td>
+                    <td class="film-name">Cheaters</td>
+                    <td class="role">Stunt Rigger</td>
+                    <td class="director">Elliot Hegarty</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2018-2022</td>
+                    <td class="film-name">A Discovery of Witches</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Jamie Donoughue</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2012-2021</td>
+                    <td class="film-name">Casualty</td>
+                    <td class="role">Stunt Performer + Stunt Double + Stunt Driver</td>
+                    <td class="director">Steve Hughes</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Eternals</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Chloé Zhao</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Ridley Road</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Lisa Mulcahy</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Britannia</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Ben Gregor</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Infinite</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Antoine Fuqua</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Fast & Furious 9</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Justin Lin</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2021</td>
+                    <td class="film-name">The Nevers</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Andrew Bernstein</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2022</td>
+                    <td class="film-name">Fantastic Beasts: The Secrets of Dumbledore</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Justice League</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Zack Snyder</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2021</td>
+                    <td class="film-name">The One</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jeremy Lovering</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2021</td>
+                    <td class="film-name">Coronation Street</td>
+                    <td class="role">Stunt Driver + Stunt Double</td>
+                    <td class="director">John Anderson</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2020</td>
+                    <td class="film-name">Tin Star</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">Justin Chadwick</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2020</td>
+                    <td class="film-name">The Witches</td>
+                    <td class="role">Utility Stunts</td>
+                    <td class="director">Robert Zemeckis</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2020</td>
+                    <td class="film-name">The Great</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Colin Bucksey</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2020</td>
+                    <td class="film-name">Shakespeare & Hathaway: Private Investigators</td>
+                    <td class="role">Stunt Performer + Stunt Double</td>
+                    <td class="director">Piotr Szkopiak</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2020</td>
+                    <td class="film-name">The Stranger</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Daniel O'Hara</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2020</td>
+                    <td class="film-name">COBRA</td>
+                    <td class="role">Stunt Performer + Stunt Double</td>
+                    <td class="director">Al Mackay</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Star Wars: Episode IX - The Rise of Skywalker</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">J.J. Abrams</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Treadstone</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Brad Anderson</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2019</td>
+                    <td class="film-name">The Feed</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Carl Tibbetts</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Greed</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Michael Winterbottom</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Pennyworth</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Rob Bailey</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2015-2019</td>
+                    <td class="film-name">Game of Thrones</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Nutter</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Dumbo</td>
+                    <td class="role">Stunt Performer + Utility Stunts</td>
+                    <td class="director">Tim Burton</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2019</td>
+                    <td class="film-name">Agatha Raisin</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Roberto Bangura</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Fantastic Beasts: The Crimes of Grindelwald</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Overlord</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Julius Avery</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Outlaw/King</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Mackenzie</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Christopher Robin</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Marc Forster</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Solo: A star Wars Story</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Ron Howard</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2018</td>
+                    <td class="film-name">Electric Dreams</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Michael Dinner</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2017</td>
+                    <td class="film-name">Justice League</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Zack Snyder</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2017</td>
+                    <td class="film-name">American Assassin</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Michael Cuesta</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2017</td>
+                    <td class="film-name">Wonder Woman</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Patty Jenkins</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2017</td>
+                    <td class="film-name">King Arthur: Legend of the Sword</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Guy Ritchie</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2017</td>
+                    <td class="film-name">Lucky Man</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">Jamie Childs</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2017</td>
+                    <td class="film-name">The Take Down</td>
+                    <td class="role">Actor</td>
+                    <td class="director">David Newton</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Rogue One</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Gareth Edwards</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Jet Trash</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Charles Henri Belleville</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Fantastic Beasts and Where to Find Them</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Doctor Strange</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Scott Derrickson</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Miss Peregrine's Home for Peculiar Children</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Tim Burton</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Unattended Item</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Filippos Vokotopoulos</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Bridget Jones's Baby</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Sharon Maguire</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">The Legend of Tarzan</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Now You See Me 2</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jon M. Chu</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Criminal</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Ariel Vromen</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">London Has Fallen</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Babak Najafi</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Grimsby</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Louis Leterrier</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2016</td>
+                    <td class="film-name">Dad's Army</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Oliver Parker</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2015-2016</td>
+                    <td class="film-name">Galavant</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">John Fortenberry</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2015</td>
+                    <td class="film-name">Spectre</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Sam Mendes</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2015</td>
+                    <td class="film-name">Pan</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Joe Wright</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2015</td>
+                    <td class="film-name">Legend</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Brian Helgeland</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2014</td>
+                    <td class="film-name">Atlantis</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Justin Molotnikov</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2014</td>
+                    <td class="film-name">Exodus: Gods and Kings</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Ridley Scott</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2014</td>
+                    <td class="film-name">The Great Fire</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jon M. Chu</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2014</td>
+                    <td class="film-name">Dracula Untold</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Gary Shore</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2014</td>
+                    <td class="film-name">24: Live Another Day</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jon Cassar</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2014</td>
+                    <td class="film-name">Maleficent</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Robert Stromberg</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">Thor: The Dark World</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Alan Taylor</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">Kick-Ass 2</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jeff Wadlow</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">The World's End</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Edgar Wright</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">Jack the Giant Slayer</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Bryan Singer</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">In Fear</td>
+                    <td class="role">Stunt Driver</td>
+                    <td class="director">Jeremy Lovering</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2013</td>
+                    <td class="film-name">Jack the Giant Slayer</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Bryan Singer</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2011-2012</td>
+                    <td class="film-name">Inspector George Gently</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Nicholas Renton</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2012</td>
+                    <td class="film-name">Coward</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Dave Roddham</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2012</td>
+                    <td class="film-name">Snow White and the Huntsman</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Rupert Sanders</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2012</td>
+                    <td class="film-name">John Carter</td>
+                    <td class="role">Stunts (as Pete Ford)</td>
+                    <td class="director">Andrew Stanton</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2012</td>
+                    <td class="film-name">Midsomer Murders</td>
+                    <td class="role">Stunt Performer + Stunt Double</td>
+                    <td class="director">Renny Rye</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">War Horse</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Steven Spielberg</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">Hugo</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Martin Scorsese</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">Johnny English Reborn</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Oliver Parker</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">Captain America: The First Avenger</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Joe Johnston</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">Harry Potter and the Deathly Hallows: Part 2</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2011</td>
+                    <td class="film-name">X-Men: First Class</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Matthew Vaughn</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2011</td>
+                    <td class="film-name">Vera</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Peter Hoar</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2010</td>
+                    <td class="film-name">Gulliver's Travels</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Rob Letterman</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2010</td>
+                    <td class="film-name">Prince of Persia: The Sands of Time</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Mike Newell</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2011</td>
+                    <td class="film-name">M.I.High</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Simon Hook</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2009</td>
+                    <td class="film-name">Harry Brown</td>
+                    <td class="role">Stunt Double</td>
+                    <td class="director">Daniel Barber</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2008</td>
+                    <td class="film-name">Harley Street</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Paul Whittington</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2008</td>
+                    <td class="film-name">The Dark Knight</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Christopher Nolan</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="TV">
+                    <td class="yr">2008</td>
+                    <td class="film-name">Waking the Dead</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Andy Hay</td>
+                    <td class="yr">TV</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2007</td>
+                    <td class="film-name">National Treasure: Book of Secrets</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Jon Turteltaub</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2007</td>
+                    <td class="film-name">The Golden Compass</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Chris Weitz</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2007</td>
+                    <td class="film-name">Death Defying Acts</td>
+                    <td class="role">Stunt Performer (As Pete Ford)</td>
+                    <td class="director">Gillian Armstrong</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2007</td>
+                    <td class="film-name">Elizabeth: The Golden Age</td>
+                    <td class="role">Stunt Performer (As Pete Ford)</td>
+                    <td class="director">Shekhar Kapur</td>
+                    <td class="yr">Film</td>
+                </tr>
+                 <tr data-type="Film">
+                    <td class="yr">2007</td>
+                    <td class="film-name">Harry Potter and the Order of the Phoenix</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">David Yates</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2007</td>
+                    <td class="film-name">Holby Blue</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Martin Hutchings</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2006</td>
+                    <td class="film-name">The Da Vinci Code</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Ron Howard</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2005</td>
+                    <td class="film-name">Harry Potter and the Goblet of Fire</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Mike Newell</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="TV">
+                    <td class="yr">2005</td>
+                    <td class="film-name">The Golden Hour</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Julian Holmes</td>
+                    <td class="yr">TV</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2005</td>
+                    <td class="film-name">Batman Begins</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Christopher Nolan</td>
+                    <td class="yr">Film</td>
+                </tr>
+                <tr data-type="Film">
+                    <td class="yr">2002</td>
+                    <td class="film-name">Harry Potter and the Chamber of Secrets</td>
+                    <td class="role">Stunt Performer</td>
+                    <td class="director">Chris Columbus</td>
+                    <td class="yr">Film</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    <p>ukstunts@sky.com</p>
+</footer>
+
+<script>
+    function filterCredits(type, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const rows = document.querySelectorAll('#creditsBody tr');
+        rows.forEach(row => {
+            row.style.display = (type === 'all' || row.dataset.type === type) ? '' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

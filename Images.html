@@ -1,0 +1,367 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pete Ford Stunts</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+    
+
+header {
+            background-color: #000;
+            color: #ea4e1b;
+            padding: 20px;
+            background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+        }
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.header-text p {
+    margin: 5px 0 0 0;
+    color: #ea4e1b;
+    font-size: 16px;
+}
+        
+        h1 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            font-size: 2.4rem;
+            color: #ea4e1b;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            position:sticky;
+            top:0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            color: #ea4e1b;
+        }
+        
+         nav a.active {
+            color: #ea4e1b;
+            font-weight: bold;
+        }
+
+        .parallax {
+   
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+       
+
+        footer {
+            background: #000;
+            color: #ea4e1b;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+.gallery img {
+  width: 200px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  opacity: 0.8;
+}
+
+
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+}
+
+#modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="assets/Images.gif" alt="StuntLogo" class="Banner" >
+
+    
+</header>
+
+<nav> 
+    <a href="Homepage.html">Home</a>
+    <a href="Biography.html">Biography</a>
+    <a href="Images.html"class="active">Images</a>
+    <a href="Credits.html">Credits</a>
+    <a href="Contacts.html ">Contact</a>
+    <a href="Awards.html">Awards</a>
+</nav>
+
+<div class="parallax"></div>
+
+<style>
+  .gallery-section { padding: 40px 20px 80px; background: #f4f4f4; font-family: Arial, sans-serif; }
+  .gallery-title { text-align: center; font-size: 2.4rem; font-weight: 900; color: #ea4e1b; margin-bottom: 8px; letter-spacing: 3px; text-transform: uppercase; font-family: 'Bebas Neue', 'Arial Black', sans-serif; }
+  .gallery-underline { width: 50px; height: 3px; background: #ea4e1b; margin: 0 auto 32px; border-radius: 2px; }
+  .carousel-wrapper { position: relative; max-width: 760px; margin: 0 auto; }
+  .carousel-track-outer { overflow: hidden; border-radius: 4px; }
+  .carousel-track { display: flex; transition: transform 0.4s ease; }
+  .carousel-slide { min-width: 100%; position: relative; cursor: pointer; }
+ .carousel-slide img { width: 100%; height: 400px; object-fit: contain; object-position: center; background: #111; display: block; filter: brightness(0.92); transition: filter 0.3s; }
+  .carousel-slide:hover img { filter: brightness(1); }
+  .slide-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; padding: 24px 16px 12px; font-size: 13px; letter-spacing: 0.5px; }
+  .expand-hint { position: absolute; top: 12px; right: 12px; background: rgba(234,78,27,0.85); color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 3px; letter-spacing: 0.5px; opacity: 0; transition: opacity 0.2s; }
+  .carousel-slide:hover .expand-hint { opacity: 1; }
+  .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 40px; height: 40px; font-size: 18px; cursor: pointer; border-radius: 3px; z-index: 10; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+  .carousel-btn:hover { background: #ea4e1b; }
+  .btn-prev { left: -20px; }
+  .btn-next { right: -20px; }
+  .thumbnails { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+  .thumb { width: 70px; height: 50px; object-fit: cover; border-radius: 3px; cursor: pointer; opacity: 0.55; border: 2px solid transparent; transition: opacity 0.2s, border-color 0.2s; }
+  .thumb.active { opacity: 1; border-color: #ea4e1b; }
+  .dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #bbb; cursor: pointer; transition: background 0.2s; }
+  .dot.active { background: #ea4e1b; }
+  .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; flex-direction: column; }
+  .lightbox-overlay.open { display: flex; }
+  .lightbox-img { max-width: 90vw; max-height: 80vh; object-fit: contain; border-radius: 3px; }
+  .lightbox-caption { color: #ccc; font-size: 13px; margin-top: 12px; letter-spacing: 0.5px; }
+  .lightbox-close { position: fixed; top: 20px; right: 28px; color: #fff; font-size: 32px; cursor: pointer; line-height: 1; opacity: 0.7; transition: opacity 0.2s, color 0.2s; background: none; border: none; }
+  .lightbox-close:hover { opacity: 1; color: #ea4e1b; }
+  .lightbox-nav { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: none; width: 44px; height: 44px; font-size: 20px; cursor: pointer; border-radius: 3px; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+  .lightbox-nav:hover { background: #ea4e1b; }
+  .lightbox-prev { left: 16px; }
+  .lightbox-next { right: 16px; }
+</style>
+
+<div class="gallery-section">
+  <p class="gallery-title">Gallery</p>
+  <div class="gallery-underline"></div>
+
+  <div class="carousel-wrapper">
+    <button class="carousel-btn btn-prev" id="prevBtn">&#8592;</button>
+    <div class="carousel-track-outer">
+      <div class="carousel-track" id="track">
+
+    
+        <div class="carousel-slide" onclick="openLightbox(0)">
+          <img src="assets/baftawin.jpg" alt="BAFTA Win">
+          <div class="slide-label">BAFTA Win</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+
+       
+        <div class="carousel-slide" onclick="openLightbox(1)">
+          <img src="assets/Bluelights.jpg" alt="Blue Lights">
+          <div class="slide-label">Blue Lights</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+
+      
+        <div class="carousel-slide" onclick="openLightbox(2)">
+          <img src="assets/Burn.jpg" alt="Fire Burn">
+          <div class="slide-label">Game of Thrones</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+
+        <div class="carousel-slide" onclick="openLightbox(3)">
+          <img src="assets/Crash.jpeg" alt="Car crash">
+          <div class="slide-label">Car Crash</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+
+        <div class="carousel-slide" onclick="openLightbox(4)">
+          <img src="assets/Explosion.jpg" alt="Explosion">
+          <div class="slide-label">Explosion</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(5)">
+          <img src="assets/Manonfire.jpg" alt="Manonfire">
+          <div class="slide-label">Hot Rap</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(6)">
+          <img src="assets/Walking.jpg" alt="Walk">
+          <div class="slide-label">Kraven the Hunter</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(7)">
+          <img src="assets/Truck.jpg" alt="Truck">
+          <div class="slide-label">Shooting Driving Sequence</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(8)">
+          <img src="assets/Stormtrooper.jpg" alt="star wars">
+          <div class="slide-label">Star Wars</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(9)">
+          <img src="assets/Stormtrooper1.jpg" alt="star wars">
+          <div class="slide-label">Star Wars</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(10)">
+          <img src="assets/Ropes.jpg" alt="Ropes">
+          <div class="slide-label">Ropes</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(11)">
+          <img src="assets/Peteford.jpg" alt="Pete Ford">
+          <div class="slide-label">Pete Ford</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        <div class="carousel-slide" onclick="openLightbox(11)">
+          <img src="assets/Full_length.jpg" alt="Pete Ford">
+          <div class="slide-label">Pete Ford</div>
+          <span class="expand-hint">Click to expand</span>
+        </div>
+        
+        
+      </div>
+    </div>
+    <button class="carousel-btn btn-next" id="nextBtn">&#8594;</button>
+
+    <div class="thumbnails" id="thumbs"></div>
+    <div class="dots" id="dots"></div>
+  </div>
+</div>
+
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lightbox-close" id="lbClose">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lbPrev">&#8592;</button>
+  <img class="lightbox-img" id="lbImg" src="" alt="">
+  <p class="lightbox-caption" id="lbCaption"></p>
+  <button class="lightbox-nav lightbox-next" id="lbNext">&#8594;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const track = document.getElementById('track');
+  const thumbsEl = document.getElementById('thumbs');
+  const dotsEl = document.getElementById('dots');
+  const lbOverlay = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  let current = 0;
+
+  const imgs = Array.from(slides).map(s => ({
+    src: s.querySelector('img').src,
+    label: s.querySelector('.slide-label').textContent
+  }));
+
+  imgs.forEach((img, i) => {
+    const th = document.createElement('img');
+    th.className = 'thumb' + (i === 0 ? ' active' : '');
+    th.src = img.src;
+    th.onclick = () => goTo(i);
+    thumbsEl.appendChild(th);
+
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goTo(i);
+    dotsEl.appendChild(dot);
+  });
+
+  function goTo(n) {
+    current = (n + imgs.length) % imgs.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.thumb').forEach((t, i) => t.classList.toggle('active', i === current));
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  document.getElementById('prevBtn').onclick = () => goTo(current - 1);
+  document.getElementById('nextBtn').onclick = () => goTo(current + 1);
+
+  let autoplay = setInterval(() => goTo(current + 1), 4000);
+  document.querySelector('.carousel-wrapper').addEventListener('mouseenter', () => clearInterval(autoplay));
+  document.querySelector('.carousel-wrapper').addEventListener('mouseleave', () => {
+    autoplay = setInterval(() => goTo(current + 1), 4000);
+  });
+
+  function openLightbox(i) {
+    current = i;
+    lbImg.src = imgs[i].src;
+    lbCaption.textContent = imgs[i].label;
+    lbOverlay.classList.add('open');
+  }
+
+  document.getElementById('lbClose').onclick = () => lbOverlay.classList.remove('open');
+  document.getElementById('lbPrev').onclick = (e) => { e.stopPropagation(); openLightbox((current - 1 + imgs.length) % imgs.length); };
+  document.getElementById('lbNext').onclick = (e) => { e.stopPropagation(); openLightbox((current + 1) % imgs.length); };
+  lbOverlay.onclick = (e) => { if (e.target === lbOverlay) lbOverlay.classList.remove('open'); };
+
+  document.addEventListener('keydown', e => {
+    if (!lbOverlay.classList.contains('open')) return;
+    if (e.key === 'Escape') lbOverlay.classList.remove('open');
+    if (e.key === 'ArrowLeft') openLightbox((current - 1 + imgs.length) % imgs.length);
+    if (e.key === 'ArrowRight') openLightbox((current + 1) % imgs.length);
+  });
+</script>
+
+
+<footer>
+    <p>ukstunts@sky.com</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
